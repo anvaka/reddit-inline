@@ -1,0 +1,14 @@
+<a href="http://www.reddit.com/r/{{current}}" class="current">{{current}}</a>
+<ul class="mine flat-list">
+    {{#subreddits}}
+    <li>
+        <span class="separator">-</span>
+        <a href="http://www.reddit.com/r/{{.}}">{{.}}</a>
+    </li>
+    {{/subreddits}}
+</ul>
+<form class="quickGo">
+    <span class="goLabel">Go:</span>
+    <span class="rlabel">/r/</span>
+    <input id='gotor' placeholder="funny ⏎"></input>
+</form>

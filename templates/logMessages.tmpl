@@ -1,0 +1,19 @@
+{{#loading}}
+<p class='loading'>
+Loading <span class='name'>{{name}}</span>...
+</p>
+{{/loading}}
+{{#error}}
+<div class='error'>
+<p class='header'>
+Could not load <a class='name subreddit' href="http://www.reddit.com{{url}}">{{name}}</a><br/>
+</p>
+<p class='response'>
+    {{response}}
+</p>
+<p class='contactMe'>
+    If this error persists please check my <a href='http://www.twitter.com/anvaka'>twitter</a>
+    and let me know
+</p>
+</div>
+{{/error}}

@@ -1,0 +1,69 @@
+{{#things}}
+<div class="thing id-{{name}} link " data-fullname="{{name}}" data-ups="{{ups}}" data-downs="{{downs}}">
+    <p class="parent">
+    </p>
+    <!-- index number
+    <span class="rank" style="width:3.30ex;"></span> -->
+    <div class="midcol {{voteStatus}}" style="width:5ex;">
+        <div class="arrow up{{upmod}} login-required" data-fullname="{{name}}" role="button" aria-label="upvote" tabindex="0">
+        </div>
+        <div class="score dislikes">
+            {{scoreDislikes}}
+        </div>
+        <div class="score unvoted">
+            {{score}}
+        </div>
+        <div class="score likes">
+            {{scoreLikes}}
+        </div>
+        <div class="arrow down{{downmod}} login-required" data-fullname="{{name}}" role="button" aria-label="downvote" tabindex="0">
+        </div>
+    </div>
+    {{#thumb}}
+    <a class="thumbnail loggedin {{aclass}}" href="{{url}}">
+        {{#img}}
+        <img src="{{url}}" width="70" height="61" alt="">
+        {{/img}}
+    </a>
+    {{/thumb}}
+    <div class="entry {{voteStatus}}">
+        <p class="title">
+            <a class="title loggedin " href="{{url}}">{{title}}</a>
+            {{#flair}}<span class="linkflairlabel">{{label}}</span>{{/flair}}
+            <span class="domain">(<a href="http://www.reddit.com/domain/{{domain}}/">{{domain}}</a>)</span>
+        </p>
+        <p class="tagline">
+            <span>
+                (<span class='post_ups' title="{{ups}} up votes">{{ups}}</span>|<span class='post_downs' title="{{downs}} down votes">{{downs}}</span>)
+            </span>
+            submitted <time title="{{createdUTC}}" datetime="{{createdISO}}">{{elapsed}}</time> ago by <a href="http://www.reddit.com/user/{{author}}" class="author">{{author}}</a>
+            <span class="userattrs">
+            </span> to <a href="http://www.reddit.com/r/{{subreddit}}/" class="subreddit hover">{{subreddit}}</a>
+        </p>
+        <ul class="flat-list buttons">
+            {{#over_18}}
+            <li class="rounded nsfw-stamp stamp"><acronym title="Adult content: Not Safe For Work">NSFW</acronym></li>
+            {{/over_18}}
+            <li class="first">
+                <a class="comments" href="http://www.reddit.com{{permalink}}">{{num_comments}} comments</a>
+            </li>
+        </ul>
+    </div>
+    <div class="clearleft"></div>
+</div>
+{{/things}}
+{{#pagingModel}}
+<p class="nextprev">view more: 
+    {{#before}}
+    <a class='prev' href="http://www.reddit.com/?count={{count}}&before={{pageId}}" rel="nofollow prev">‹ prev</a>
+    <span class="separator"></span>
+    {{/before}}
+    {{#after}}
+    <a class='next' href="http://www.reddit.com/?count={{count}}&after={{pageId}}" rel="nofollow next">next ›</a>
+    {{/after}}
+</p>
+{{/pagingModel}}
+<div id='about'>
+    brought to you by anvaka (c) 2013. (<a href='http://www.twitter.com/anvaka'>twitter</a>|<a href='http://www.reddit.com/user/anvaka'>reddit</a>)
+</div>
+

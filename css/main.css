@@ -1,0 +1,407 @@
+body {  font:normal x-small verdana,arial,helvetica,sans-serif;background-color:#FFF;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, iframe { margin: 0;}
+#header {
+    background: #cee3f8;
+    border-bottom: 1px solid #5f99cf;
+    min-height: 40px;
+    position: relative;
+}
+#tabsContainer {
+    display: inline-block;
+}
+#thingsContainer {
+    margin-top: 20px;
+}
+
+#tabsContainer {
+    position: absolute;
+    bottom: 0;
+}
+#subredditView {
+    padding-bottom: 10px;
+    margin-top: 19px;
+}
+.tabmenu {
+list-style-type:none;
+white-space:nowrap;
+display:inline-block;
+margin-top:5px;
+bottom: 0;
+margin: 0;
+padding: 0;
+}
+
+.tabmenu li {
+display:inline;
+font-weight: 700;
+font-size: 12px;
+margin:0 3px;
+cursor: pointer;
+}
+
+.tabmenu li p {
+background-color:#eff7ff;
+color: #369;
+padding:2px 6px 0;
+display: inline;
+}
+.tabmenu li ul {
+    display: none;
+}
+.tabmenu li.selected p {
+color:#FF4500;
+background-color:#FFF;
+border:1px solid #5f99cf;
+border-bottom:1px solid #FFF;
+z-index:100;
+}
+.tabmenu li.selected ul {
+    display: inline-block;
+    position: absolute;
+    bottom: -16px;
+    color: #369;
+}
+.tabmenu li.selected ul li {
+    font-weight: normal;
+}
+.tabmenu li.selected ul li.selected {
+    color:#FF4500;
+}
+#toprange {
+    left: -35px;
+}
+#newrising {
+    left: -36px;
+}
+
+.link {
+padding-left:3px;
+margin:0 0 8px;
+}
+.link .score {
+text-align:center;
+color:#c6c6c6;
+}
+.link .midcol {
+font-weight:700;
+font-size:small;
+}
+.link .score.likes, .post_ups {
+color:#FF8B60;
+}
+
+
+.link .score.dislikes, .post_downs {
+color:#9494FF;
+}
+.midcol {
+float:left;
+margin-right:4px;
+margin-left:7px;
+background:transparent;
+overflow:hidden;
+}
+.arrow {
+height:14px;
+display:block;
+cursor:pointer;
+background-position:center center;
+background-repeat:no-repeat;
+width:15px;
+outline:none;
+margin:2px auto 0;
+}
+
+.arrow.upmod {
+background-image:url(/assets/sprite.png);
+background-position:-63px -629px;
+background-repeat:no-repeat;
+}
+
+.arrow.downmod {
+background-image:url(/assets/sprite.png);
+background-position:-31px -629px;
+background-repeat:no-repeat;
+}
+
+.arrow.up {
+background-image:url(/assets/sprite.png);
+background-position:-47px -629px;
+background-repeat:no-repeat;
+}
+
+.arrow.down {
+background-image:url(/assets/sprite.png);
+background-position:-102px -612px;
+background-repeat:no-repeat;
+}
+.score.likes,.score.dislikes,.likes .score,.dislikes .score {
+display:none;
+}
+
+.likes .score.likes {
+display:inline;
+}
+
+.dislikes .score.dislikes {
+display:inline;
+}
+
+.likes div.score.likes {
+display:block;
+}
+
+.dislikes div.score.dislikes {
+display:block;
+}
+.thumbnail {
+float:left;
+overflow:hidden;
+width:70px;
+margin:0 5px;
+}
+
+.thumbnail.nsfw {
+height:70px;
+background-image:url(/assets/sprite.png);
+background-position:0 -299px;
+background-repeat:no-repeat;
+}
+
+.thumbnail.self {
+height:50px;
+background-image:url(/assets/sprite.png);
+background-position:0 -421px;
+background-repeat:no-repeat;
+}
+
+.thumbnail.default {
+height:50px;
+background-image:url(/assets/sprite.png);
+background-position:0 -370px;
+background-repeat:no-repeat;
+}
+.entry {
+overflow:hidden;
+margin-left:3px;
+opacity:1;
+}
+.entry .buttons li {
+display:inline;
+border:none;
+padding-right:4px;
+}
+
+.entry .buttons li+li {
+padding-left:4px;
+}
+
+.entry .buttons li.stamp+li.stamp {
+margin-left:4px;
+}
+
+.entry .buttons li a {
+color:#888;
+font-weight:700;
+padding:0 1px;
+}
+
+.entry .buttons li a.nonbutton {
+color:#369;
+font-weight:400;
+}
+
+.entry .buttons .status-msg {
+display:none;
+margin-right:.5em;
+}
+.nsfw-stamp acronym {
+color: #ac3939;
+font-size: x-small;
+text-decoration: none;
+padding: 0 2px;
+border: 1px solid #d27979!important;
+border-radius: 3px;
+}
+.link .title {
+font-size:medium;
+font-weight:400;
+margin-bottom:1px;
+}
+
+.thing .title {
+color:blue;
+margin-right:.4em;
+overflow:hidden;
+padding:0;
+}
+
+.thing .title.loggedin {
+color:blue;
+}
+.thing .title:visited {
+color: #551a8b;
+}
+a {
+text-decoration: none;
+color: #369;
+}
+a.visited {
+color: #551a8b;   
+}
+.domain, .tagline {
+color: #888;
+font-size: x-small;
+}
+.domain a {
+color: #888;
+}
+.domain a:hover,.tagline a:hover,.entry .buttons a:hover,.button a:hover{
+text-decoration:underline;
+}
+.flat-list {
+list-style-type:none;
+display:inline;
+}
+
+.flat-list li,.flat-list form {
+display:inline;
+white-space:nowrap;
+}
+
+.link .flat-list {
+display:block;
+padding:1px 0;
+}
+.link .flat-list {
+display:block;
+padding:1px 0;
+}
+
+.link.compressed .flat-list {
+display:inline-block;
+padding:0 0 1px;
+}
+.flat-list .selected a,.toolbar .title:active{
+color:#FF4500;
+}
+.clearleft { clear: left; height: 0;}
+div.selected {
+    border:1px dashed gray;
+}
+
+.linkflairlabel {
+font-size: x-small;
+max-width: 10em;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.linkflairlabel {
+color: red!important;
+font-weight: 900;
+background: white!important;
+border: 1px solid red;
+}
+.nextprev {
+color: gray;
+font-size: larger;
+margin-top: 10px;
+margin-left: 10px;
+}
+.nextprev a {
+padding: 1px 4px;
+background: #eee;
+border: 1px solid #ddd;
+border-radius: 3px;
+}
+.rounded {
+border-radius: 7px;
+}
+#userInfo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #EFF7FF;
+    padding: 4px;
+    line-height: 12px;
+    border-top-left-radius: 7px;
+}
+
+#toolbar {
+background-color: #f0f0f0;
+white-space: nowrap;
+border-bottom: 1px solid gray;
+font-size: 90%;
+height: 18px;
+line-height: 18px;
+width: 100%;
+position: fixed;
+z-index: 99;
+left: 0;
+top: 0;
+color: black;
+}
+.quickGo {
+    font-size: 100%;
+    right: 0;
+    width: 110px;
+    padding-left: 10px;
+    position: fixed;
+    background: #f0f0f0;
+    border-bottom: 1px solid red;
+    top: -1px;
+    cursor: pointer;
+}
+.quickGo input {
+    background: transparent;
+    border: 0;
+    font-size: 13px;
+    width: 65px;
+    padding: 0;
+}
+.quickGo input:focus {
+    outline: none;
+}
+.quickGo .goLabel {
+    font-weight: bold;
+    color: black;
+}
+.separator {
+color: lightblue;
+margin: 0px .7ex 0px .7ex;
+cursor: default;
+}
+
+#toolbar ul {
+    margin-right: 100px;
+    padding-left: 0;
+    text-transform: uppercase;
+}
+#toolbar .current {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: red;
+    margin-left: 8px;
+}
+.loading, .error {
+    font-size: large;
+    text-align: center;
+}
+.loading .name {
+    color : red;
+}
+.error {
+    color: #9494FF;
+    margin: 0 10px;
+}
+.error .contactMe {
+    color: black;
+    font-size: small;
+    margin-top: 15px;    
+}
+#about {
+    margin-top: 11px;
+    margin-bottom: 6px;
+    margin-left: 11px;
+}
